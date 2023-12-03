@@ -1,0 +1,12 @@
+{# /var/www/sae301_/templates/accueil/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/asset/css/style.css') }}"> {% endblock %}
+{% block body %}
+    <h1>Bienvenue sur la page d'accueil !</h1>
+    {# Tu peux ajouter ici d'autres éléments HTML ou des variables Twig selon tes besoins #}
+    <a href="{{ path('app_devoirs') }}">devoirs</a>
+{% endblock %}
