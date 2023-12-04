@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="{{ asset('/asset/css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../public/asset/js/countdown.js"></script>
 </head>
 
 <body>
 
 <?php
-require ('/header.php');
+require ('header.php');
 ?>
 
 <!-- Ajoutez le bouton avec le menu déroulant -->
@@ -29,7 +30,7 @@ require ('/header.php');
 </div>
 <div id="timers"></div>
 
-<button onclick="goToCountdownPage()">Ajouter un devoir</button>
+<butto onclick="goToCountdownPage()">Ajouter un devoir</button>
 
     <!-- Élément pour afficher le message et le bouton "Compris" -->
     <div id="messageContainer">
@@ -59,7 +60,7 @@ require ('/header.php');
 
 
         function goToCountdownPage() {
-            window.location.href = '/ajouter';
+            window.location.href = 'countdown.php';
         }
 
         // Définition de la fonction de recherche
@@ -126,7 +127,6 @@ require ('/header.php');
         let reloadTimers = true; // Ajoutez une variable de contrôle pour déterminer si les timers doivent être rechargés
 
     </script>
-    <script src={{ asset('/asset/css/style.css') }}></script>
 </body>
 <footer>
     <p>&copy; 2023 EduBook.com <br><a href="contact.php">Contactez nous</a></p>

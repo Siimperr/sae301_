@@ -1,10 +1,53 @@
-{# /var/www/sae301_/templates/ajouter/index.html.twig #}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-{% extends 'base.html.twig' %}
+<?php
+require ('header.php');
+?>
 
-{% block title %}Accueil{% endblock %}
+</body>
 
-{% block body %}
-    <h1>Bienvenue sur la page ajouter !</h1>
-    {# Tu peux ajouter ici d'autres éléments HTML ou des variables Twig selon tes besoins #}
-{% endblock %}
+<div class="ajout">
+    <form id="countdownForm">
+        <div><label for="newTargetDate">Date : </label>
+            <input type="datetime-local" id="newTargetDate" required></div>
+
+
+        <input type="text" id="matiere" placeholder="Matière" required>
+
+        <input type="text" id="nomProfesseur" placeholder="Nom du professeur" required>
+
+        <textarea id="descriptionDevoir" placeholder="Description" required></textarea>
+
+        <div><label for="UE">UE : </label>
+            <select id="UE" required>
+                <option value="Développer">Développer</option>
+                <option value="Entreprendre">Entreprendre</option>
+                <option value="Comprendre">Comprendre</option>
+                <option value="Exprimer">Exprimer</option>
+                <option value="Concevoir">Concevoir</option>
+            </select></div>
+
+        <button type="button" onclick="addCountdown()">Ajouter le devoir</button>
+        <button type="button" onclick="goToIndexPage()">Retour à la page d'accueil</button>
+
+    </form>
+</div>
+<script src="countdown.js"></script>
+<script>
+    function goToIndexPage() {
+        window.location.href = 'index.php';
+    }
+</script>
+
+<footer>
+    <p>&copy; 2023 EduBook.com <br><a href="contact.php">Contactez nous</a></p>
+</footer>
+
+</html>

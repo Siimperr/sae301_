@@ -1,10 +1,39 @@
-{# /var/www/sae301_/templates/connexion/index.html.twig #}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-{% extends 'base.html.twig' %}
+<?php
+require ('header.php');
+?>
 
-{% block title %}Accueil{% endblock %}
+</body>
 
-{% block body %}
-    <h1>Bienvenue sur la page connexion !</h1>
-    {# Tu peux ajouter ici d'autres éléments HTML ou des variables Twig selon tes besoins #}
-{% endblock %}
+<div class="connexion">
+    <div class="formulaire"><form method="post">
+            <div class="titre"><h3>Connexion</h3></div>
+            <div>
+
+                <input type="text" name="email" placeholder="E-mail"/><br/>
+            </div>
+            <div>
+
+                <input type="password" name="mdp" placeholder="Mot de passe"/><br/>
+            </div>
+            <div class="bouton-form">
+                <a href="index.php" class="btn">Se connecter</a><br/>
+                <p>Pas encore <a href="inscription.php">inscrit</a> ?</p>
+            </div>
+        </form></div>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 EduBook.com <br><a href="contact.php">Contactez nous</a></p>
+</footer>
+
+</html>

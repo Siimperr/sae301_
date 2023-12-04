@@ -1,7 +1,1369 @@
-*{
+* {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    font-family: "Josefin Sans", sans-serif;
 }
-body{
-    background-color: #f2f2f2;
+
+::-webkit-scrollbar {
+    display: none;
 }
+
+body header {
+    width: 100%;
+    position: relative;
+}
+body header nav {
+    height: 60px;
+    background-color: rgb(185, 75, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-bottom-style: solid;
+}
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.fil{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+body header nav .logo a {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body header nav ul {
+    display: flex;
+    justify-content: center;
+}
+body header nav ul li {
+    display: block;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+body header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+body header nav ul li .picto {
+    display: none;
+}
+body header nav div {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+body header nav div a img {
+    height: 55px;
+}
+body header nav div .button {
+    margin-right: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+}
+body header nav div .button:hover {
+    border-radius: 2px;
+}
+
+.banner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    background-image: url(../images/banner.svg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    object-fit: fill;
+}
+.banner div {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.banner div div {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+.banner div div h2 {
+    font-size: 37px;
+    margin-bottom: 35px;
+}
+.banner div div p {
+    font-size: 20px;
+}
+
+#matieres {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#matieres h2 {
+    color: rgb(185, 75, 255);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+#matieres .galerie {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matieres .galerie .grand-bloc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#matieres .galerie .grand-bloc a {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(185, 75, 255);
+}
+#matieres .galerie .grand-bloc a .bloc {
+    height: 250px;
+    width: 550px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+#matieres .galerie .grand-bloc a .bloc:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+#matieres .galerie .grand-bloc a .bloc:hover img {
+    height: 105%;
+}
+#matieres .galerie .grand-bloc a .bloc img {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+}
+#matieres .galerie .grand-bloc a .bloc .info {
+    padding: 15px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#matieres .galerie .grand-bloc a .bloc .info .text {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matieres .galerie .grand-bloc a .bloc .info .text h3 {
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+#matieres .galerie .grand-bloc a .bloc .info .text p {
+    text-align: center;
+    font-size: 15px;
+}
+#matieres .galerie .grand-bloc a .bloc .info .trait {
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(185, 75, 255);
+}
+#matieres .galerie .grand-bloc a .bloc .info .chiffre {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matieres .galerie .grand-bloc a .bloc .info .chiffre p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+#matieres .galerie #plus {
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#matieres .galerie #plus a {
+    text-decoration: none;
+    color: rgb(185, 75, 255);
+    font-size: 14px;
+}
+#matieres .galerie #plus a .bloc {
+    height: 250px;
+    width: 550px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+#matieres .galerie #plus a .bloc:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+#matieres .galerie #plus a .bloc:hover img {
+    height: 105%;
+}
+#matieres .galerie #plus a .bloc img {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+}
+#matieres .galerie #plus a .bloc .info {
+    padding: 15px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#matieres .galerie #plus a .bloc .info .text {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matieres .galerie #plus a .bloc .info .text h3 {
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+#matieres .galerie #plus a .bloc .info .text p {
+    text-align: center;
+    font-size: 15px;
+}
+#matieres .galerie #plus a .bloc .info .trait {
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(185, 75, 255);
+}
+#matieres .galerie #plus a .bloc .info .chiffre {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#matieres .galerie #plus a .bloc .info .chiffre p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+#matieres .galerie #btn {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+#matieres .galerie #btn p {
+    padding-right: 5px;
+    color: rgb(185, 75, 255);
+    font-size: 17px;
+}
+#matieres .galerie #btn #btn-icon {
+    color: rgb(185, 75, 255);
+    height: 15px;
+}
+
+#taches {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#taches h2 {
+    color: rgb(185, 75, 255);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+#taches .galerie {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#taches .galerie a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(185, 75, 255);
+}
+#taches .galerie a .bloc {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    justify-content: space-around;
+    align-items: center;
+}
+#taches .galerie a .bloc:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+
+#stats {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#stats h2 {
+    color: rgb(185, 75, 255);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+#stats .galerie {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#stats .galerie .bloc {
+    height: 175px;
+    width: 200px;
+    margin: 25px;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+#stats .galerie .bloc:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+#stats .galerie .bloc .info {
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#stats .galerie .bloc .info .text {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#stats .galerie .bloc .info .text p {
+    text-align: center;
+    color: rgb(185, 75, 255);
+    font-size: 17px;
+}
+#stats .galerie .bloc .info .trait {
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(185, 75, 255);
+}
+#stats .galerie .bloc .info .chiffre {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(185, 75, 255);
+}
+
+.data {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data .tab {
+    width: 80%;
+    margin: 30px;
+}
+
+.inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+}
+.inscription .formulaire {
+    display: flex;
+    height: 500px;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .bouton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.inscription .formulaire form .bouton .modif {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .bouton .modif:hover {
+    border-radius: 2px;
+}
+.inscription .formulaire form .bouton .deco {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: red;
+    border-color: red;
+}
+.inscription .formulaire form .bouton .deco:hover {
+    border-radius: 2px;
+}
+.inscription .formulaire form .bloc {
+    display: flex;
+}
+.inscription .formulaire form .bloc .espace {
+    margin-right: 20px;
+}
+.inscription .formulaire form .bloc .espace input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .bloc div input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form div {
+    width: 100%;
+}
+.inscription .formulaire form div p {
+    color: rgb(185, 75, 255);
+    font-size: 18px;
+}
+.inscription .formulaire form div select {
+    width: 100%;
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form div select option {
+    color: black;
+}
+.inscription .formulaire form div input {
+    width: 100%;
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .bouton-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inscription .formulaire form .bouton-form .btn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    font-size: 17px;
+    border-color: rgb(185, 75, 255);
+    color: rgb(185, 75, 255);
+}
+.inscription .formulaire form .bouton-form .btn:hover {
+    border-radius: 2px;
+}
+.inscription .formulaire form .bouton-form p a {
+    color: rgb(185, 75, 255);
+}
+
+.connexion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+}
+.connexion .formulaire {
+    display: flex;
+    height: 350px;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+.connexion .formulaire form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+}
+.connexion .formulaire form .titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(185, 75, 255);
+}
+.connexion .formulaire form div {
+    width: 100%;
+}
+.connexion .formulaire form div input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 100%;
+}
+.connexion .formulaire form .bouton-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.connexion .formulaire form .bouton-form .btn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    font-size: 17px;
+    border-color: rgb(185, 75, 255);
+    color: rgb(185, 75, 255);
+}
+.connexion .formulaire form .bouton-form .btn:hover {
+    border-radius: 2px;
+}
+.connexion .formulaire form .bouton-form p {
+    color: rgb(185, 75, 255);
+}
+.connexion .formulaire form .bouton-form p a {
+    color: rgb(185, 75, 255);
+}
+
+input::placeholder {
+    color: rgb(185, 75, 255);
+}
+
+.devoirs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.devoirs #popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 98;
+}
+.devoirs #popup-overlay .popup {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+}
+.devoirs #popup-overlay .popup p {
+    font-size: 16px;
+    color: rgb(185, 75, 255);
+}
+.devoirs #popup-overlay .popup div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+.devoirs #popup-overlay .popup div .popup-exit {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+}
+.devoirs #popup-overlay .popup div .popup-exit:hover {
+    border-radius: 2px;
+}
+.devoirs #popup-overlay .popup div .popup-link {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: red;
+    border-color: red;
+}
+.devoirs #popup-overlay .popup div .popup-link:hover {
+    border-radius: 2px;
+}
+.devoirs h2 {
+    color: rgb(185, 75, 255);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.devoirs .filtre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.devoirs .filtre input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    margin-top: 0;
+}
+.devoirs .filtre #flav-filtre {
+    height: 30px;
+}
+.devoirs .filtre #filtre-plus {
+    width: 0;
+    overflow: hidden;
+}
+.devoirs .filtre #filtre-plus div {
+    background-color: rgb(207, 207, 207);
+    height: 30px;
+    width: 200px;
+}
+.devoirs .galerie {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.devoirs .galerie .grand-bloc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.devoirs .galerie .grand-bloc .bloc {
+    height: 250px;
+    width: 550px;
+    margin: 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(185, 75, 255);
+    justify-content: space-around;
+}
+.devoirs .galerie .grand-bloc .bloc:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+.devoirs .galerie .grand-bloc .bloc:hover {
+    filter: brightness(100%);
+}
+.devoirs .galerie .grand-bloc .bloc .haut {
+    display: flex;
+    width: 100%;
+}
+.devoirs .galerie .grand-bloc .bloc .haut .titre {
+    padding-left: 30px;
+}
+.devoirs .galerie .grand-bloc .bloc .haut .prof {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+.devoirs .galerie .grand-bloc .bloc .descri {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.devoirs .galerie .grand-bloc .bloc .bas {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.devoirs .galerie .grand-bloc .bloc .bouton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.devoirs .galerie .grand-bloc .bloc .bouton div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.devoirs .galerie .grand-bloc .bloc .bouton div .modif {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+}
+.devoirs .galerie .grand-bloc .bloc .bouton div .modif:hover {
+    border-radius: 2px;
+}
+.devoirs .galerie .grand-bloc .bloc .bouton div #supprimer {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: red;
+    border-color: red;
+}
+.devoirs .galerie .grand-bloc .bloc .bouton div #supprimer:hover {
+    border-radius: 2px;
+}
+.devoirs .galerie .grand-bloc a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+}
+.devoirs .galerie .grand-bloc a .bloc-plus {
+    height: 250px;
+    width: 550px;
+    margin: 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.devoirs .galerie .grand-bloc a .bloc-plus:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+.devoirs .galerie .grand-bloc a .bloc-plus:hover svg {
+    height: 135px;
+}
+.devoirs .galerie .grand-bloc a .bloc-plus svg {
+    height: 125px;
+    margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+    color: rgb(185, 75, 255);
+}
+.devoirs .galerie .grand-bloc a .bloc-plus p {
+    color: rgb(185, 75, 255);
+}
+
+.loupe img {
+    height: 25px;
+}
+
+.ajout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+}
+.ajout #countdownForm {
+    display: flex;
+    height: 550px;
+    width: 550px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(185, 75, 255);
+}
+.ajout #countdownForm div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.ajout #countdownForm input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.ajout #countdownForm textarea {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.ajout #countdownForm select {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.ajout #countdownForm button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+    background-color: rgb(255, 255, 255);
+}
+.ajout #countdownForm button:hover {
+    border-radius: 2px;
+}
+
+.modif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+}
+.modif #editcountdownForm {
+    display: flex;
+    height: 550px;
+    width: 550px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(185, 75, 255);
+}
+.modif #editcountdownForm div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.modif #editcountdownForm input {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.modif #editcountdownForm textarea {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.modif #editcountdownForm select {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+    width: 80%;
+}
+.modif #editcountdownForm button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+    background-color: rgb(255, 255, 255);
+}
+.modif #editcountdownForm button:hover {
+    border-radius: 2px;
+}
+
+footer {
+    background-color: rgb(185, 75, 255);
+    height: 60px;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 0;
+}
+footer a {
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+}
+
+.search {
+    border-color: rgb(185, 75, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 10px;
+    height: 25px;
+    font-size: 17px;
+    color: rgb(185, 75, 255);
+}
+
+#timers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#timers .haut {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#timers .haut .gauche {
+    display: flex;
+    justify-content: flex-start;
+}
+#timers .haut .droite {
+    display: flex;
+    justify-content: flex-start;
+}
+#timers p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#timers .UE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#timers .grand-block {
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+    border-color: rgb(185, 75, 255);
+    border-style: solid;
+    border-width: 1px;
+    margin: 15px;
+    width: 400px;
+    padding: 15px;
+}
+#timers .grand-block:hover {
+    filter: brightness(75%);
+    border-radius: 1px;
+}
+#timers .grand-block:hover {
+    filter: brightness(100%);
+}
+#timers .grand-block p {
+    color: rgb(0, 0, 0);
+}
+#timers .grand-block .bloc {
+    display: flex;
+    justify-content: space-around;
+}
+#timers .grand-block .bloc .btn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    color: red;
+    border-color: red;
+}
+#timers .grand-block .bloc .btn:hover {
+    border-radius: 2px;
+}
+#timers .grand-block .bloc button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 50px;
+    background-color: white;
+    color: rgb(185, 75, 255);
+    border-color: rgb(185, 75, 255);
+    margin: 10px;
+}
+#timers .grand-block .bloc button:hover {
+    border-radius: 2px;
+}
+#timers .grand-block .bloc button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/*=======================  MOBILE  ==================================*/
+@media screen and (max-width: 700px) {
+    body header {
+        position: fixed;
+        bottom: 0px;
+    }
+    body header nav {
+        justify-content: center;
+    }
+    body header nav .logo {
+        display: none;
+    }
+    body header nav ul li {
+        display: block;
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+    body header nav ul li a {
+        display: none;
+    }
+    body header nav ul li .picto {
+        display: flex;
+        height: 45px;
+    }
+    body header nav div {
+        display: none;
+    }
+    .data {
+        height: 55vh;
+    }
+    .data .tab {
+        width: 95%;
+        margin: 3px;
+    }
+    #matieres .galerie .grand-bloc a .bloc {
+        width: 350px;
+    }
+    #matieres .galerie .grand-bloc a img {
+        width: 20%;
+    }
+    #matieres .galerie #plus a .bloc {
+        width: 350px;
+    }
+    #matieres .galerie #plus a img {
+        width: 20%;
+    }
+    #stats .galerie {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #stats .galerie .bloc .info .text p {
+        font-size: 14px;
+    }
+    .devoirs .galerie .grand-bloc .bloc {
+        width: 380px;
+    }
+    .devoirs .galerie .grand-bloc a .bloc-plus {
+        width: 380px;
+    }
+    #taches .galerie {
+        width: 95%;
+    }
+    #taches .galerie a .bloc div {
+        font-size: 13px;
+    }
+    #taches .galerie a .bloc div svg {
+        height: 20px;
+    }
+    footer {
+        height: 100px;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    footer a {
+        margin-top: 15px;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */

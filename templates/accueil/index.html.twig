@@ -1,12 +1,206 @@
-{# /var/www/sae301_/templates/accueil/index.html.twig #}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
 
-{% extends 'base.html.twig' %}
+<?php
+require ('header_co.php');
+?>
 
-{% block title %}Accueil{% endblock %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('/asset/css/style.css') }}"> {% endblock %}
-{% block body %}
-    <h1>Bienvenue sur la page d'accueil !</h1>
-    {# Tu peux ajouter ici d'autres éléments HTML ou des variables Twig selon tes besoins #}
-    <a href="{{ path('app_devoirs') }}">devoirs</a>
-{% endblock %}
+</body>
+
+<div class="banner">
+    <div>
+        <div class="text">
+            <h2>EduBook</h2>
+            <p>Votre clé vers la réussite académique optimisée. Libérez votre potentiel avec notre solution de planification inégalée.</p>
+        </div>
+    </div>
+</div>
+
+<div id="matieres">
+    <h2>Matières</h2>
+    <div class="galerie">
+        <div class="grand-bloc">
+            <a href="devoirs.php"><div class="bloc">
+                    <img src="images/matiere.png" alt="matiere">
+                    <div class="info">
+                        <div class="text">
+                            <h3>Maths</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div class="trait"></div>
+                        <div class="chiffre">
+                            <p>Nombres de devoirs :</p>
+                            <h3>4</h3>
+                        </div>
+                    </div>
+                </div></a>
+            <a href="devoirs.php"><div class="bloc">
+                    <img src="images/matiere.png" alt="matiere">
+                    <div class="info">
+                        <div class="text">
+                            <h3>Maths</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div class="trait"></div>
+                        <div class="chiffre">
+                            <p>Nombres de devoirs :</p>
+                            <h3>4</h3>
+                        </div>
+                    </div>
+                </div></a>
+        </div>
+        <div id="plus">
+            <a href="devoirs.php"><div class="bloc">
+                    <img src="images/matiere.png" alt="matiere">
+                    <div class="info">
+                        <div class="text">
+                            <h3>Maths</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div class="trait"></div>
+                        <div class="chiffre">
+                            <p>Nombres de devoirs :</p>
+                            <h3>4</h3>
+                        </div>
+                    </div>
+                </div></a>
+            <a href="devoirs.php"><div class="bloc">
+                    <img src="images/matiere.png" alt="matiere">
+                    <div class="info">
+                        <div class="text">
+                            <h3>Maths</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div class="trait"></div>
+                        <div class="chiffre">
+                            <p>Nombres de devoirs :</p>
+                            <h3>4</h3>
+                        </div>
+                    </div>
+                </div></a>
+        </div>
+        <div id="btn">
+            <p id="p-icon">Voir plus</p>
+            <ion-icon id="btn-icon" name="chevron-down-outline"></ion-icon>
+        </div>
+        <script src="js/app.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+</div>
+
+<div id="taches">
+    <h2>Tâches à finir</h2>
+    <div class=galerie>
+        <a href="devoirs.php"><div class="bloc">
+                <div>TP culture artistique WR007</div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="25" height="25">
+                        <circle cx="100" cy="100" r="80" fill="rgb(229,185,77)" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="25" height="25">
+                        <circle cx="100" cy="100" r="80" fill="rgb(208,119,64)" />
+                    </svg>
+                </div>
+                <div>timer</div>
+            </div></a>
+        <a href="devoirs.php"><div class="bloc"></div></a>
+        <a href="devoirs.php"><div class="bloc"></div></a>
+    </div>
+</div>
+
+<div id="stats">
+    <h2>Tes statistiques</h2>
+    <div class=galerie>
+        <div class="bloc">
+            <div class="info">
+                <div class="text">
+                    <p>Nombres total de devoirs rendus :</p>
+                </div>
+                <div class="trait"></div>
+                <div class="chiffre">
+                    <h3>7</h3>
+                </div>
+            </div>
+        </div>
+        <div class="bloc">
+            <div class="info">
+                <div class="text">
+                    <p>Nombres total de devoirs non-rendus :</p>
+                </div>
+                <div class="trait"></div>
+                <div class="chiffre">
+                    <h3>1</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="data">
+    <div class="tab">
+        <canvas id="myChart"></canvas>
+        <script>
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            'Comprendre',
+                            'Concevoir',
+                            'Exprimer',
+                            'Développer',
+                            'Entreprendre'
+                        ],
+                        datasets: [{
+                            data: [2, 1, 6, 3, 4],
+                            backgroundColor: [
+                                'rgb(156,43,38)',
+                                'rgb(208,119,64)',
+                                'rgb(229,185,77)',
+                                'rgb(65,108,63)',
+                                'rgb(43,76,118)'
+                            ],
+                            hoverOffset: 5
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            );
+        </script>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 EduBook.com <a href="contact.php"> Contactez nous</a></p>
+    <div></div>
+</footer>
+
+</html>
